@@ -1,9 +1,15 @@
-import './App.css'
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/theme";
+
+import GlobalStyles from "./styles/globalStyles";
+
+import Router from "./router";
 
 export default function App() {
   return (
-    <main>
-      React ⚛️ + Vite ⚡ + Replit
-    </main>
-  )
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Router />
+    </ThemeProvider>
+  );
 }
